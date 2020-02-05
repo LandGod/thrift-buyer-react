@@ -2,6 +2,8 @@ import React, { Component } from "react";
 
 type StorePageProps = {
   storeName: string;
+  googleStoreAddress: string;
+  address: string;
 };
 
 export class StorePage extends Component<StorePageProps> {
@@ -25,10 +27,10 @@ export class StorePage extends Component<StorePageProps> {
             <p>
               <a
                 className="text-secondary"
-                href="https://www.google.com/maps/place/{{googleStoreAddress}}"
+                href={`https://www.google.com/maps/place/${this.props.googleStoreAddress}`}
                 target="__blank"
               >
-                {address}
+                {this.props.address}
               </a>
             </p>
           </div>
