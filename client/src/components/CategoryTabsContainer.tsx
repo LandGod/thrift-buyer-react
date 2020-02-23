@@ -1,13 +1,18 @@
-import React, { Component } from "react";
-import { instanceOf } from "prop-types";
+import React, { Component, ReactNode, ReactNodeArray, ReactElement } from "react";
+import { CategoryList } from "./sharedInterfaces";
+// Import 
 
-export class CategoryTabsContainer extends Component {
+type CataegoryTabsContainerProps = {
+  categories: CategoryList
+}
+
+export class CategoryTabsContainer extends Component<CataegoryTabsContainerProps> {
 
   render() {
     return (
 
       <div className="container">
-          {this.props.children?.map()}
+          {this.props.categoryMap.map(() => {})}
       </div>
     );
   }
