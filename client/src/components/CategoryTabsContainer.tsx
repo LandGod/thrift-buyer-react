@@ -1,6 +1,5 @@
 import React, { Component, ReactNode, ReactNodeArray, ReactElement } from "react";
 import { CategoryList } from "./sharedInterfaces";
-// Import 
 
 interface CataegoryTabsContainerProps {
   categories: CategoryList;
@@ -20,7 +19,9 @@ export class CategoryTabsContainer extends Component<CataegoryTabsContainerProps
     return (
 
       <div className="container">
-          {this.state.categories.keys().map(() => {})}
+          {Object.keys(this.state.categories).map((categoryKey) => {
+            // Category ratings tab element goes here
+          })}
       </div>
     );
   }
