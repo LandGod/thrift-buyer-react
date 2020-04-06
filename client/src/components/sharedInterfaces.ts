@@ -16,6 +16,8 @@ export interface CategoryList {
     misc?: CategoryRatings;
 }
 
+export type Category = 'fassion' | 'furniture' | 'home_goods' | 'misc';
+
 export interface StoreInfo {
     name: string,
     address: string,

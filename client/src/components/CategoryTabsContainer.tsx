@@ -19,9 +19,32 @@ export class CategoryTabsContainer extends Component<CataegoryTabsContainerProps
     return (
 
       <div className="container">
-          {Object.keys(this.state.categories).map((categoryKey) => {
-            // Category ratings tab element goes here
-          })}
+
+        <div className="row">
+
+          <div className="col-4">
+            <h4>Category</h4>
+          </div>
+          <div className="col-4">
+            <h3>Quality</h3>
+          </div>
+          <div className="col-4">
+            <h3>Quantity</h3>
+          </div>
+          <div className="col-4">
+            <h3>Price</h3>
+          </div>
+
+        </div>
+
+        {Object.keys(this.state.categories).map((categoryKey) => {
+          // Category ratings tab element goes here as bootstrap rows
+        })}
+
+        <div className="row">
+          {/* Add category button goes here */}
+        </div>
+
       </div>
     );
   }
