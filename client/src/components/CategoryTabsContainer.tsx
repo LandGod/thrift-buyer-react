@@ -22,16 +22,16 @@ export class CategoryTabsContainer extends Component<CataegoryTabsContainerProps
 
         <div className="row">
 
-          <div className="col-4">
+          <div className="col-3">
             <h4>Category</h4>
           </div>
-          <div className="col-4">
+          <div className="col-3">
             <h3>Quality</h3>
           </div>
-          <div className="col-4">
+          <div className="col-3">
             <h3>Quantity</h3>
           </div>
-          <div className="col-4">
+          <div className="col-3">
             <h3>Price</h3>
           </div>
 

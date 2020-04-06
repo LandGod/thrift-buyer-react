@@ -36,3 +36,10 @@ export interface StoreInfo {
     coords: {x: number; y: number};
     categories: CategoryList;
 }
+
+export enum CategoryNames {
+    fassion = 'Fassion',
+    furniture = 'Furniture',
+    home_goods = 'Home Goods',
+    misc = "Misc."
+}
