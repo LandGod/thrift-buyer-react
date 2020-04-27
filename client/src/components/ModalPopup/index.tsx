@@ -8,11 +8,11 @@ export type ModalPopupProps = {
   title?: string;
   message?: string; // Message or children can be passed in for maximum customizeability
   // ToDo: Figure out how to import type defenitions from react-bootstrap module for use here
-  size: 'sm'| 'lg',
+  size: "sm" | "lg";
   buttons: buttons;
   confirm: (...args: any[]) => void;
   cancel: (...arg: any[]) => void;
-  show?: boolean // Defaults to true
+  show?: boolean; // Defaults to true
 };
 
 class ModalPopup extends Component<ModalPopupProps> {
@@ -21,18 +21,21 @@ class ModalPopup extends Component<ModalPopupProps> {
     buttons: "close",
     confirm: () => {},
     cancel: () => {},
-    show: true
+    show: true,
   };
 
   // Select the buttons to render based on props.
   buttonSelect = (buttonType: buttons): React.ReactElement => {
     switch (buttonType) {
       default:
-        // Intentional fallthrough. 
+      // Intentional fallthrough.
       case "close" || "okay":
         return (
           <div className="modal__footer">
-            <button  className="modal__button--neutral" onClick={this.props.confirm}>
+            <button
+              className="modal__button--neutral"
+              onClick={this.props.confirm}
+            >
               {buttonType}
             </button>
           </div>
@@ -59,28 +62,31 @@ class ModalPopup extends Component<ModalPopupProps> {
   };
 
   render() {
-    if (this.props.show){
-    return (
-      <div
-        className={`modal ${this.props.size === 'sm' ? 'modal--small' : ''}`}
-      >
-        <div className="modal__header">
-          {this.props.header ? (
-            <div className="modal__header">{this.props.header}</div>
-          ) : (
-            null
-          )}
-          <span className="modal__x" onClick={this.props.cancel}></span>
+    if (this.props.show) {
+      return (
+        <div className="modal__background" onClick={this.props.cancel}>
+          <div
+            className={`modal ${
+              this.props.size === "sm" ? "modal--small" : ""
+            }`}
+          >
+            <div className="modal__header">
+              {this.props.header ? (
+                <div className="modal__header">{this.props.header}</div>
+              ) : null}
+              <button className="modal__x" onClick={this.props.cancel}>x</button>
+            </div>
+            <div className="modal__body">
+              {this.props.title ? <h4>{this.props.title}</h4> : ""}
+              {this.props.message ? <p>{this.props.message}</p> : ""}
+              {this.props.children ? this.props.children : ""}
+            </div>
+            {/* Footer rendered below based on desired buttons */}
+            {this.buttonSelect(this.props.buttons)}
+          </div>
         </div>
-        <div className="modal__body">
-          {this.props.title ? <h4>{this.props.title}</h4> : ""}
-          {this.props.message ? <p>{this.props.message}</p> : ""}
-          {this.props.children ? this.props.children : ""}
-        </div>
-        {/* Footer rendered below based on desired buttons */}
-        {this.buttonSelect(this.props.buttons)}
-      </div>
-    )} else {
+      );
+    } else {
       return null;
     }
   }
