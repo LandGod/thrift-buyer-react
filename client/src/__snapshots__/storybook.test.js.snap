@@ -1,0 +1,271 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots ModalPopup Confirm 1`] = `
+<div
+  className="modal__background"
+  onClick={[Function]}
+>
+  <div
+    className="modal__container"
+  >
+    <div
+      className="modal"
+    >
+      <div
+        className="modal__header"
+      >
+        <button
+          className="modal__x"
+          onClick={[Function]}
+        >
+          x
+        </button>
+      </div>
+      <div
+        className="modal__body"
+      >
+        <div
+          className="modal__title"
+        >
+          This is a Large Confirm Modal
+        </div>
+        <div
+          className="modal__text"
+        >
+          <p>
+            This is a short message explaining what's up with this confirm modal.
+          </p>
+          
+        </div>
+      </div>
+      <div
+        className="modal__footer"
+      >
+        <button
+          className="modal__button modal__button--confirm"
+          onClick={[Function]}
+        >
+          Confirm
+        </button>
+        <button
+          className="modal__button modal__button--cancel"
+          onClick={[Function]}
+        >
+          Cancel
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots ModalPopup Default 1`] = `
+<div
+  className="modal__background"
+  onClick={[Function]}
+>
+  <div
+    className="modal__container"
+  >
+    <div
+      className="modal"
+    >
+      <div
+        className="modal__header"
+      >
+        <button
+          className="modal__x"
+          onClick={[Function]}
+        >
+          x
+        </button>
+      </div>
+      <div
+        className="modal__body"
+      >
+        
+        <div
+          className="modal__text"
+        >
+          
+          
+        </div>
+      </div>
+      <div
+        className="modal__footer"
+      >
+        <button
+          className="modal__button modal__button--neutral"
+          onClick={[Function]}
+        >
+          okay
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots ModalPopup Message Only 1`] = `
+<div
+  className="modal__background"
+  onClick={[Function]}
+>
+  <div
+    className="modal__container"
+  >
+    <div
+      className="modal"
+    >
+      <div
+        className="modal__header"
+      >
+        <button
+          className="modal__x"
+          onClick={[Function]}
+        >
+          x
+        </button>
+      </div>
+      <div
+        className="modal__body"
+      >
+        
+        <div
+          className="modal__text"
+        >
+          <p>
+            This modal has no title.
+          </p>
+          
+        </div>
+      </div>
+      <div
+        className="modal__footer"
+      >
+        <button
+          className="modal__button modal__button--neutral"
+          onClick={[Function]}
+        >
+          okay
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots ModalPopup Title Only 1`] = `
+<div
+  className="modal__background"
+  onClick={[Function]}
+>
+  <div
+    className="modal__container"
+  >
+    <div
+      className="modal"
+    >
+      <div
+        className="modal__header"
+      >
+        <button
+          className="modal__x"
+          onClick={[Function]}
+        >
+          x
+        </button>
+      </div>
+      <div
+        className="modal__body"
+      >
+        <div
+          className="modal__title"
+        >
+          Modal with only a title
+        </div>
+        <div
+          className="modal__text"
+        >
+          
+          
+        </div>
+      </div>
+      <div
+        className="modal__footer"
+      >
+        <button
+          className="modal__button modal__button--neutral"
+          onClick={[Function]}
+        >
+          okay
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots ModalPopup Wall Of Text 1`] = `
+<div
+  className="modal__background"
+  onClick={[Function]}
+>
+  <div
+    className="modal__container"
+  >
+    <div
+      className="modal"
+    >
+      <div
+        className="modal__header"
+      >
+        <span
+          className="modal__header-text"
+        >
+          U WoT Mate?
+        </span>
+        <button
+          className="modal__x"
+          onClick={[Function]}
+        >
+          x
+        </button>
+      </div>
+      <div
+        className="modal__body"
+      >
+        <div
+          className="modal__title"
+        >
+          This Modal Has a Wall of Text
+        </div>
+        <div
+          className="modal__text"
+        >
+          
+          <p>
+            Bacon ipsum dolor amet hamburger fatback bresaola shankle brisket capicola. Doner pork loin ball tip, turkey hamburger pork belly shankle. Shoulder boudin buffalo, capicola bacon shankle pork loin brisket t-bone jowl beef ribs ribeye. Ground round jerky ball tip, meatloaf frankfurter pancetta strip steak filet mignon landjaeger. Meatloaf sausage boudin burgdoggen jowl chislic beef ribs, pork jerky pastrami swine ham filet mignon. Turkey tenderloin boudin jowl pork chop ground round. Turkey bacon pork loin, chicken pig buffalo landjaeger. Kevin flank strip steak pancetta filet mignon turducken rump tail boudin sausage.
+          </p>
+          <p>
+            Kevin meatloaf cupim ground round burgdoggen spare ribs pastrami filet mignon pork loin bacon tongue t-bone tri-tip ham hock tenderloin. Bresaola ribeye pork belly frankfurter tri-tip bacon meatball beef porchetta. Shankle pork venison jowl, short loin ham hamburger chuck pancetta bacon cow capicola sirloin ball tip shoulder. Pancetta frankfurter pig corned beef. Venison capicola pork chop bacon. Shank pork chop beef ribs tail jerky. Beef ham hock alcatra, venison ham flank jerky chicken tri-tip turkey tenderloin spare ribs cupim. Boudin biltong tongue tri-tip bresaola brisket. Beef ribs spare ribs pork loin chuck. Tenderloin spare ribs ribeye fatback shankle capicola picanha short ribs. Bacon chuck capicola pastrami, pork chop chicken drumstick tri-tip turducken. Boudin venison ham hock, salami buffalo jerky corned beef frankfurter beef ribs. Bresaola ham hock prosciutto spare ribs beef ribs, ground round shank porchetta sirloin beef shoulder pork loin.
+          </p>
+          <p>
+            Bacon ipsum dolor amet hamburger fatback bresaola shankle brisket capicola. Doner pork loin ball tip, turkey hamburger pork belly shankle. Shoulder boudin buffalo, capicola bacon shankle pork loin brisket t-bone jowl beef ribs ribeye. Ground round jerky ball tip, meatloaf frankfurter pancetta strip steak filet mignon landjaeger. Meatloaf sausage boudin burgdoggen jowl chislic beef ribs, pork jerky pastrami swine ham filet mignon. Turkey tenderloin boudin jowl pork chop ground round. Turkey bacon pork loin, chicken pig buffalo landjaeger. Kevin flank strip steak pancetta filet mignon turducken rump tail boudin sausage. Kevin meatloaf cupim ground round burgdoggen spare ribs pastrami filet mignon pork loin bacon tongue t-bone tri-tip ham hock tenderloin. Bresaola ribeye pork belly frankfurter tri-tip bacon meatball beef porchetta. Shankle pork venison jowl, short loin ham hamburger chuck pancetta bacon cow capicola sirloin ball tip shoulder. Pancetta frankfurter pig corned beef. Venison capicola pork chop bacon. Shank pork chop beef ribs tail jerky. Beef ham hock alcatra, venison ham flank jerky chicken tri-tip turkey tenderloin spare ribs cupim. Boudin biltong tongue tri-tip bresaola brisket. Beef ribs spare ribs pork loin chuck. Tenderloin spare ribs ribeye fatback shankle capicola picanha short ribs. Bacon chuck capicola pastrami, pork chop chicken drumstick tri-tip turducken. Boudin venison ham hock, salami buffalo jerky corned beef frankfurter beef ribs. Bresaola ham hock prosciutto spare ribs beef ribs, ground round shank porchetta sirloin beef shoulder pork loin.
+          </p>
+        </div>
+      </div>
+      <div
+        className="modal__footer"
+      >
+        <button
+          className="modal__button modal__button--neutral"
+          onClick={[Function]}
+        >
+          okay
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
