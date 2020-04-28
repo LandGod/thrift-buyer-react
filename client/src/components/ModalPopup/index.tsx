@@ -34,7 +34,7 @@ class ModalPopup extends Component<ModalPopupProps> {
           <div className="modal__footer">
             <button
               className="modal__button modal__button--neutral"
-              onClick={this.props.confirm}
+              onClick={(e) => {e.stopPropagation(); this.props.confirm()}}
             >
               {buttonType}
             </button>
@@ -46,13 +46,13 @@ class ModalPopup extends Component<ModalPopupProps> {
           <div className="modal__footer">
             <button
               className="modal__button modal__button--confirm"
-              onClick={this.props.confirm}
+              onClick={(e) => {e.stopPropagation(); this.props.confirm()}}
             >
               Confirm
             </button>
             <button
               className="modal__button modal__button--cancel"
-              onClick={this.props.cancel}
+              onClick={(e) => {e.stopPropagation(); this.props.cancel()}}
             >
               Cancel
             </button>
@@ -74,7 +74,7 @@ class ModalPopup extends Component<ModalPopupProps> {
               {this.props.header ? (
                 <div className="modal__header">{this.props.header}</div>
               ) : null}
-              <button className="modal__x" onClick={this.props.cancel}>x</button>
+              <button className="modal__x" onClick={(e) => {e.stopPropagation(); this.props.cancel()}}>x</button>
             </div>
             <div className="modal__body">
               {this.props.title ? <h4>{this.props.title}</h4> : ""}

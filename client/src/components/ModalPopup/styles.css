@@ -49,4 +49,7 @@
 
 .modal__button {
     flex-flow: column;
+    border: 1px solid black;
+    padding: 3px;
+    margin: 3px;
 }
