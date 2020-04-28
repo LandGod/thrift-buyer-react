@@ -7,8 +7,6 @@ export type ModalPopupProps = {
   header?: string;
   title?: string;
   message?: string; // Message or children can be passed in for maximum customizeability
-  // ToDo: Figure out how to import type defenitions from react-bootstrap module for use here
-  size: "sm" | "lg";
   buttons: buttons;
   confirm: (...args: any[]) => void;
   cancel: (...arg: any[]) => void;
@@ -17,7 +15,6 @@ export type ModalPopupProps = {
 
 class ModalPopup extends Component<ModalPopupProps> {
   static defaultProps: ModalPopupProps = {
-    size: "lg",
     buttons: "close",
     confirm: () => {},
     cancel: () => {},
@@ -75,11 +72,7 @@ class ModalPopup extends Component<ModalPopupProps> {
       return (
         <div className="modal__background" onClick={this.props.cancel}>
           <div className="modal__container">
-            <div
-              className={`modal ${
-                this.props.size === "sm" ? "modal--small" : ""
-              }`}
-            >
+            <div className="modal">
               <div className="modal__header">
                 {this.props.header ? (
                   <span className="modal__header-text">

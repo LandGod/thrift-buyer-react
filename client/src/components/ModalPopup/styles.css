@@ -18,11 +18,18 @@
   max-height: 50vh;
 }
 
+.modal__container--small {
+  max-width: 25vw;
+  max-height: 25vw;
+  font-size: 0.9em;
+}
+
 .modal {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   border: 1px solid black;
+  border-radius: 7px;
   background-color: white;
   padding: 1em;
 }
@@ -74,6 +81,7 @@
 .modal__button {
   flex-flow: column;
   border: 1px solid black;
-  padding: 3px;
+  border-radius: 5px;
+  padding: 3px 4px;
   margin: 3px;
 }
