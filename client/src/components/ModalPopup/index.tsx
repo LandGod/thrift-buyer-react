@@ -1,5 +1,10 @@
-import React, { Component } from "react";
+import React, { Component, createRef } from "react";
 import "./styles.css";
+
+// TODO:
+//  -- Use effect to add event listener to DOM for 'esc' keypress
+//  -- Refactor to functional component
+//  -- Check accessibility
 
 export type buttons = "close" | "okay" | "confirm";
 
@@ -21,6 +26,16 @@ class ModalPopup extends Component<ModalPopupProps> {
     show: true,
   };
 
+  private background = createRef<HTMLDivElement>();
+
+  cancelOnBackgroundClickOrEsc = (
+    e: React.MouseEvent<HTMLDivElement, MouseEvent>
+  ) => {
+    if (e.target == this.background.current) {
+      this.props.cancel();
+    }
+  };
+
   // Select the buttons to render based on props.
   buttonSelect = (buttonType: buttons): React.ReactElement => {
     switch (buttonType) {
@@ -31,10 +46,7 @@ class ModalPopup extends Component<ModalPopupProps> {
           <div className="modal__footer">
             <button
               className="modal__button modal__button--neutral"
-              onClick={(e) => {
-                e.stopPropagation();
-                this.props.confirm();
-              }}
+              onClick={this.props.confirm}
             >
               {buttonType}
             </button>
@@ -46,19 +58,13 @@ class ModalPopup extends Component<ModalPopupProps> {
           <div className="modal__footer">
             <button
               className="modal__button modal__button--confirm"
-              onClick={(e) => {
-                e.stopPropagation();
-                this.props.confirm();
-              }}
+              onClick={this.props.confirm}
             >
               Confirm
             </button>
             <button
               className="modal__button modal__button--cancel"
-              onClick={(e) => {
-                e.stopPropagation();
-                this.props.cancel();
-              }}
+              onClick={this.props.cancel}
             >
               Cancel
             </button>
@@ -70,7 +76,11 @@ class ModalPopup extends Component<ModalPopupProps> {
   render() {
     if (this.props.show) {
       return (
-        <div className="modal__background" onClick={this.props.cancel}>
+        <div
+          className="modal__background"
+          onClick={this.cancelOnBackgroundClickOrEsc}
+          ref={this.background}
+        >
           <div className="modal__container">
             <div className="modal">
               <div className="modal__header">
@@ -79,13 +89,7 @@ class ModalPopup extends Component<ModalPopupProps> {
                     {this.props.header}
                   </span>
                 ) : null}
-                <button
-                  className="modal__x"
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    this.props.cancel();
-                  }}
-                >
+                <button className="modal__x" onClick={this.props.cancel}>
                   x
                 </button>
               </div>
