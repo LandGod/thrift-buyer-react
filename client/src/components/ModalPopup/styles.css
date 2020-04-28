@@ -11,20 +11,28 @@
 }
 
 .modal {
+  position: relative;
   border: 1px solid black;
   background-color: white;
   padding: 1em;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  height: 100%;
+  max-width: 75vw;
+  max-height: 75vh;
 }
 
 .modal__body {
-    flex-flow: row;
-    flex-basis: 100%;
-    max-width: 75vw;
-    max-height: 75vh;
-    overflow: auto;
+  flex-flow: row;
+  height: 75%;
+  margin: 1em;
+}
+
+.modal__text {
+  flex-flow: column;
+  height: 90%;
+  overflow: auto;
 }
 
 .modal__header {
@@ -51,8 +59,8 @@
 }
 
 .modal__button {
-    flex-flow: column;
-    border: 1px solid black;
-    padding: 3px;
-    margin: 3px;
+  flex-flow: column;
+  border: 1px solid black;
+  padding: 3px;
+  margin: 3px;
 }
