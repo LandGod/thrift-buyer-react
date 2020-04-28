@@ -74,34 +74,42 @@ class ModalPopup extends Component<ModalPopupProps> {
     if (this.props.show) {
       return (
         <div className="modal__background" onClick={this.props.cancel}>
-          <div
-            className={`modal ${
-              this.props.size === "sm" ? "modal--small" : ""
-            }`}
-          >
-            <div className="modal__header">
-              {this.props.header ? (
-                <div className="modal__header">{this.props.header}</div>
-              ) : null}
-              <button
-                className="modal__x"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  this.props.cancel();
-                }}
-              >
-                x
-              </button>
-            </div>
-            <div className="modal__body">
-              {this.props.title ? <h4>{this.props.title}</h4> : ""}
-              <div className="modal__text">
-                {this.props.message ? <p>{this.props.message}</p> : ""}
-                {this.props.children ? this.props.children : ""}
+          <div className="modal__container">
+            <div
+              className={`modal ${
+                this.props.size === "sm" ? "modal--small" : ""
+              }`}
+            >
+              <div className="modal__header">
+                {this.props.header ? (
+                  <span className="modal__header-text">
+                    {this.props.header}
+                  </span>
+                ) : null}
+                <button
+                  className="modal__x"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    this.props.cancel();
+                  }}
+                >
+                  x
+                </button>
               </div>
+              <div className="modal__body">
+                {this.props.title ? (
+                  <div className="modal__title">{this.props.title}</div>
+                ) : (
+                  ""
+                )}
+                <div className="modal__text">
+                  {this.props.message ? <p>{this.props.message}</p> : ""}
+                  {this.props.children ? this.props.children : ""}
+                </div>
+              </div>
+              {/* Footer rendered below based on desired buttons */}
+              {this.buttonSelect(this.props.buttons)}
             </div>
-            {/* Footer rendered below based on desired buttons */}
-            {this.buttonSelect(this.props.buttons)}
           </div>
         </div>
       );
