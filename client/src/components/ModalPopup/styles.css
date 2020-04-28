@@ -38,8 +38,9 @@
   flex-flow: row nowrap;
   flex-basis: 100%;
   width: 100%;
-  height: calc(10% - 1em);
+  height: calc(10% - 1.5em);
   justify-content: right;
+  margin-bottom: 0.5em;
 }
 
 .modal__x {
@@ -55,6 +56,8 @@
   flex-flow: row;
   max-height: 80%;
   width: 100%;
+  margin-bottom: 0.5em;
+  overflow: hidden;
 }
 
 .modal__title {
@@ -65,7 +68,7 @@
 
 .modal__text {
   flex-flow: column;
-  height: 90%;
+  max-height: 90%;
   overflow: auto;
 }
 
@@ -73,7 +76,7 @@
   flex-flow: row;
   justify-content: space-between;
   flex-basis: 100%;
-  height: calc(10% - 1em);
+  height: calc(10% - 1.5em);
   min-height: 35px;
   width: 100%;
 }
