@@ -54,9 +54,8 @@
 
 .modal__body {
   flex-flow: row;
-  max-height: 80%;
+  max-height: calc(80% - 2.5em);
   width: 100%;
-  margin-bottom: 0.5em;
   overflow: hidden;
 }
 
@@ -70,6 +69,8 @@
   flex-flow: column;
   max-height: 90%;
   overflow: auto;
+  margin: 0;
+  padding: 0;
 }
 
 .modal__footer {

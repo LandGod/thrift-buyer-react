@@ -96,7 +96,7 @@ class ModalPopup extends Component<ModalPopupProps> {
                   ""
                 )}
                 <div className="modal__text">
-                  {this.props.message ? <p>{this.props.message}</p> : ""}
+                  {this.props.message ? <div>{this.props.message}</div> : ""}
                   {this.props.children ? this.props.children : ""}
                 </div>
               </div>
