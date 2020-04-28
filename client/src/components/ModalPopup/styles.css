@@ -22,6 +22,9 @@
 .modal__body {
     flex-flow: row;
     flex-basis: 100%;
+    max-width: 75vw;
+    max-height: 75vh;
+    overflow: auto;
 }
 
 .modal__header {
