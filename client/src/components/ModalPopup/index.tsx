@@ -33,7 +33,7 @@ class ModalPopup extends Component<ModalPopupProps> {
         return (
           <div className="modal__footer">
             <button
-              className="modal__button--neutral"
+              className="modal__button modal__button--neutral"
               onClick={this.props.confirm}
             >
               {buttonType}
@@ -45,13 +45,13 @@ class ModalPopup extends Component<ModalPopupProps> {
         return (
           <div className="modal__footer">
             <button
-              className="modal__button--confirm"
+              className="modal__button modal__button--confirm"
               onClick={this.props.confirm}
             >
               Confirm
             </button>
             <button
-              className="modal__button--cancel"
+              className="modal__button modal__button--cancel"
               onClick={this.props.cancel}
             >
               Cancel

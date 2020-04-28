@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react";
 import { action } from "@storybook/addon-actions";
-
+import "../../index.css";
 import ModalPopup, { ModalPopupProps } from "./";
 
 export default {
