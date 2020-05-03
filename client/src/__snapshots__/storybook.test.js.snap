@@ -1,6 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots ModalPopup Confirm 1`] = `
+<button
+  onClick={[Function]}
+  style={
+    Object {
+      "border": "1px solid black",
+      "margin": "0.5em 1em",
+      "padding": "1em",
+    }
+  }
+>
+  Click to open
+</button>
+`;
+
+exports[`Storyshots ModalPopup Confirm Open 1`] = `
 <div
   className="modal__background"
   onClick={[Function]}
@@ -32,9 +47,9 @@ exports[`Storyshots ModalPopup Confirm 1`] = `
         <div
           className="modal__text"
         >
-          <p>
+          <div>
             This is a short message explaining what's up with this confirm modal.
-          </p>
+          </div>
           
         </div>
       </div>
@@ -60,6 +75,21 @@ exports[`Storyshots ModalPopup Confirm 1`] = `
 `;
 
 exports[`Storyshots ModalPopup Default 1`] = `
+<button
+  onClick={[Function]}
+  style={
+    Object {
+      "border": "1px solid black",
+      "margin": "0.5em 1em",
+      "padding": "1em",
+    }
+  }
+>
+  Click to open
+</button>
+`;
+
+exports[`Storyshots ModalPopup Default Open 1`] = `
 <div
   className="modal__background"
   onClick={[Function]}
@@ -107,6 +137,21 @@ exports[`Storyshots ModalPopup Default 1`] = `
 `;
 
 exports[`Storyshots ModalPopup Message Only 1`] = `
+<button
+  onClick={[Function]}
+  style={
+    Object {
+      "border": "1px solid black",
+      "margin": "0.5em 1em",
+      "padding": "1em",
+    }
+  }
+>
+  Click to open
+</button>
+`;
+
+exports[`Storyshots ModalPopup Message Only Open 1`] = `
 <div
   className="modal__background"
   onClick={[Function]}
@@ -134,9 +179,9 @@ exports[`Storyshots ModalPopup Message Only 1`] = `
         <div
           className="modal__text"
         >
-          <p>
+          <div>
             This modal has no title.
-          </p>
+          </div>
           
         </div>
       </div>
@@ -156,6 +201,21 @@ exports[`Storyshots ModalPopup Message Only 1`] = `
 `;
 
 exports[`Storyshots ModalPopup Title Only 1`] = `
+<button
+  onClick={[Function]}
+  style={
+    Object {
+      "border": "1px solid black",
+      "margin": "0.5em 1em",
+      "padding": "1em",
+    }
+  }
+>
+  Click to open
+</button>
+`;
+
+exports[`Storyshots ModalPopup Title Only Open 1`] = `
 <div
   className="modal__background"
   onClick={[Function]}
@@ -207,6 +267,21 @@ exports[`Storyshots ModalPopup Title Only 1`] = `
 `;
 
 exports[`Storyshots ModalPopup Wall Of Text 1`] = `
+<button
+  onClick={[Function]}
+  style={
+    Object {
+      "border": "1px solid black",
+      "margin": "0.5em 1em",
+      "padding": "1em",
+    }
+  }
+>
+  Click to open
+</button>
+`;
+
+exports[`Storyshots ModalPopup Wall Of Text Open 1`] = `
 <div
   className="modal__background"
   onClick={[Function]}
