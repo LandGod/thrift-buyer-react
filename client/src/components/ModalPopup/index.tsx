@@ -28,16 +28,32 @@ class ModalPopup extends Component<ModalPopupProps> {
 
   private background = createRef<HTMLDivElement>();
 
-  cancelOnBackgroundClickOrEsc = (
-    e: React.MouseEvent<HTMLDivElement, MouseEvent>
-  ) => {
-    if (e.target == this.background.current) {
-      this.props.cancel();
+  componentDidMount = () => {
+    document.addEventListener("keydown", this.cancelOnBackgroundClickOrEsc);
+  };
+
+  componentWillUnmount = () => {
+    document.removeEventListener("keydown", this.cancelOnBackgroundClickOrEsc);
+  };
+
+  cancelOnBackgroundClickOrEsc = (e: Event | React.MouseEvent) => {
+    switch (e.type) {
+      case "click":
+        if (e.target == this.background.current) {
+          this.props.cancel();
+          break;
+        }
+      case "keydown":
+        //@ts-ignore (Code unreachable if wrong type)
+        if (e.keyCode == "27") {
+          this.props.cancel();
+          break;
+        }
     }
   };
 
   // Select the buttons to render based on props.
-  buttonSelect = (buttonType: buttons): React.ReactElement => {
+  private buttonSelect = (buttonType: buttons): React.ReactElement => {
     switch (buttonType) {
       default:
       // Intentional fallthrough.
