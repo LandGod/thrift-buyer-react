@@ -1,11 +1,6 @@
 import React, { Component, createRef } from "react";
 import "./styles.css";
 
-// TODO:
-//  -- Use effect to add event listener to DOM for 'esc' keypress
-//  -- Refactor to functional component
-//  -- Check accessibility
-
 export type buttons = "close" | "okay" | "confirm";
 
 export type ModalPopupProps = {
@@ -29,23 +24,39 @@ class ModalPopup extends Component<ModalPopupProps> {
   private background = createRef<HTMLDivElement>();
 
   componentDidMount = () => {
-    document.addEventListener("keydown", this.cancelOnBackgroundClickOrEsc);
+    if (this.props.show) {
+      document.addEventListener("keydown", this.cancelOnBackgroundClickOrEsc);
+    }
   };
 
   componentWillUnmount = () => {
-    document.removeEventListener("keydown", this.cancelOnBackgroundClickOrEsc);
+      document.removeEventListener("keydown", this.cancelOnBackgroundClickOrEsc);
+  };
+
+  componentDidUpdate = (prevProps: ModalPopupProps) => {
+    if (prevProps.show && !this.props.show) {
+      document.removeEventListener(
+        "keydown",
+        this.cancelOnBackgroundClickOrEsc
+      );
+    } else if (!prevProps.show && this.props.show) {
+      document.addEventListener("keydown", this.cancelOnBackgroundClickOrEsc);
+    }
   };
 
   cancelOnBackgroundClickOrEsc = (e: Event | React.MouseEvent) => {
     switch (e.type) {
       case "click":
-        if (e.target == this.background.current) {
+        if (e.target === this.background.current) {
           this.props.cancel();
           break;
         }
+        break;
       case "keydown":
         //@ts-ignore (Code unreachable if wrong type)
-        if (e.keyCode == "27") {
+        let keyPressed: number = e.which || e.keyCode;
+        if (keyPressed === 27) {
+          console.log("Logged Esc press");
           this.props.cancel();
           break;
         }
@@ -56,7 +67,7 @@ class ModalPopup extends Component<ModalPopupProps> {
   private buttonSelect = (buttonType: buttons): React.ReactElement => {
     switch (buttonType) {
       default:
-      // Intentional fallthrough.
+      // @ts-ignore -- Intentional fallthrough.
       case "close" || "okay":
         return (
           <div className="modal__footer">
