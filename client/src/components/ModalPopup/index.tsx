@@ -1,11 +1,6 @@
 import React, { Component, createRef } from "react";
 import "./styles.css";
 
-// TODO:
-//  -- Use effect to add event listener to DOM for 'esc' keypress
-//  -- Refactor to functional component
-//  -- Check accessibility
-
 export type buttons = "close" | "okay" | "confirm";
 
 export type ModalPopupProps = {
