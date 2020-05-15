@@ -11,19 +11,30 @@ export default {
 };
 
 export const RatingBoxData: RatingBoxProps = {
-  ratingReportsTo: action('Report New Rating to Parent'),
+  ratingReportsTo: action("Report New Rating to Parent"),
 };
 
 // -----------------------------------------------------------------------------
 // -----------------------------------------------------------------------------
-
+export const NoRatingsStatic = () => <RatingBox {...RatingBoxData} />;
+export const NoRatingsInteractive = () => (
+  <RatingBox {...RatingBoxData} userCanEdit={true} />
+);
+export const OneStarStatic = () => (
+  <RatingBox {...RatingBoxData} initialRating={1} />
+);
+export const OneStarInteractive = () => (
+  <RatingBox {...RatingBoxData} userCanEdit={true} initialRating={1} />
+);
 export const TwoStarStatic = () => (
   <RatingBox {...RatingBoxData} initialRating={2} />
 );
 export const TwoStarInteractive = () => (
   <RatingBox {...RatingBoxData} userCanEdit={true} initialRating={2} />
 );
-export const NoRatingsStatic = () => <RatingBox {...RatingBoxData} />;
-export const NoRatingsInteractive = () => (
-  <RatingBox {...RatingBoxData} userCanEdit={true} />
+export const ThreeStarStatic = () => (
+  <RatingBox {...RatingBoxData} initialRating={3} />
+);
+export const ThreeStarInteractive = () => (
+  <RatingBox {...RatingBoxData} userCanEdit={true} initialRating={3} />
 );
