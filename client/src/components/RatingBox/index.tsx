@@ -1,6 +1,5 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./styles.css";
-import { useState } from "@storybook/addons";
 
 export interface RatingBoxProps {
   type?: "stars" | "price"; // Default 'stars'
@@ -15,10 +14,8 @@ export default function RatingBox({
   initialRating,
   ratingReportsTo,
 }: RatingBoxProps) {
-  const [currentRating, updateCurrentRating]: [
-    number,
-    (number: number) => void
-  ] = useState(initialRating || 0);
+    
+  const [currentRating, updateCurrentRating] = useState(initialRating || 0);
 
   // Report changes in the rating to parent element, but not more than once per second
   useEffect(() => {
