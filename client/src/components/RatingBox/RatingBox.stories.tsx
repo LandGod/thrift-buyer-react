@@ -6,18 +6,24 @@ import RatingBox, { RatingBoxProps } from "./";
 export default {
   component: RatingBox,
   title: "RatingBox",
-  // Our exports that end in "Data" are not stories.
+  decorator: [(story: ReactNode) => <div>{story}</div>],
   excludeStories: /.*Data$/,
 };
 
 export const RatingBoxData: RatingBoxProps = {
-  ratingReportsTo: (reportedNumber: number) => action(`${reportedNumber}`),
+  ratingReportsTo: action('Report New Rating to Parent'),
 };
 
 // -----------------------------------------------------------------------------
 // -----------------------------------------------------------------------------
 
-export const TwoStarStatic = () => <RatingBox {...RatingBoxData} initialRating={2} />;
-export const TwoStarInteractive = () => <RatingBox {...RatingBoxData} userCanEdit={true} initialRating={2} />;
-export const NoRatingsStatic = () => <RatingBox {...RatingBoxData} />
-export const NoRatingsInteractive = () => <RatingBox {...RatingBoxData} userCanEdit={true} />
+export const TwoStarStatic = () => (
+  <RatingBox {...RatingBoxData} initialRating={2} />
+);
+export const TwoStarInteractive = () => (
+  <RatingBox {...RatingBoxData} userCanEdit={true} initialRating={2} />
+);
+export const NoRatingsStatic = () => <RatingBox {...RatingBoxData} />;
+export const NoRatingsInteractive = () => (
+  <RatingBox {...RatingBoxData} userCanEdit={true} />
+);

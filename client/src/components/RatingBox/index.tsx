@@ -14,17 +14,20 @@ export default function RatingBox({
   initialRating,
   ratingReportsTo,
 }: RatingBoxProps) {
-    
   const [currentRating, updateCurrentRating] = useState(initialRating || 0);
+  const [lastSentRating, updateLastSentRating] = useState(initialRating || 0);
 
   // Report changes in the rating to parent element, but not more than once per second
   useEffect(() => {
-    const reportDebounceTimer = setTimeout(() => {
-      ratingReportsTo(currentRating);
-    }, 100);
-    return () => {
-      clearTimeout(reportDebounceTimer);
-    };
+    if (currentRating !== lastSentRating) {
+      const reportDebounceTimer = setTimeout(() => {
+        ratingReportsTo(currentRating);
+        updateLastSentRating(currentRating);
+      }, 1000);
+      return () => {
+        clearTimeout(reportDebounceTimer);
+      };
+    }
   }, [currentRating, ratingReportsTo]);
 
   const Star = (number: number) => {
