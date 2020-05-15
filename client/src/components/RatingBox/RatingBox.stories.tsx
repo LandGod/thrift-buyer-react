@@ -17,4 +17,7 @@ export const RatingBoxData: RatingBoxProps = {
 // -----------------------------------------------------------------------------
 // -----------------------------------------------------------------------------
 
-export const Default = () => <RatingBox {...RatingBoxData} initialRating={2} />;
+export const TwoStarStatic = () => <RatingBox {...RatingBoxData} initialRating={2} />;
+export const TwoStarInteractive = () => <RatingBox {...RatingBoxData} userCanEdit={true} initialRating={2} />;
+export const NoRatingsStatic = () => <RatingBox {...RatingBoxData} />
+export const NoRatingsInteractive = () => <RatingBox {...RatingBoxData} userCanEdit={true} />
