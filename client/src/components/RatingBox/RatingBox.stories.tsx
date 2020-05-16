@@ -44,18 +44,27 @@ export const FailureModeBadType = () => (
   <RatingBox {...RatingBoxData} type="test" />
 );
 
-export const PriceOneStarStatic = () => (
-    <RatingBox {...RatingBoxData} initialRating={1} ratingType="price" />
-  );
+//  --------------- PRICE ------------------------
 
+export const PriceNoRatingsStatic = () => <RatingBox {...RatingBoxData} ratingType="price" />;
+export const PriceNoRatingsInteractive = () => (
+  <RatingBox {...RatingBoxData} userCanEdit={true} ratingType="price" />
+);
+export const PriceOneStarStatic = () => (
+  <RatingBox {...RatingBoxData} initialRating={1} ratingType="price" />
+);
+export const PriceOneStarInteractive = () => (
+  <RatingBox {...RatingBoxData} userCanEdit={true} initialRating={1} ratingType="price" />
+);
 export const PriceTwoStarStatic = () => (
   <RatingBox {...RatingBoxData} initialRating={2} ratingType="price" />
 );
 export const PriceTwoStarInteractive = () => (
-  <RatingBox
-    {...RatingBoxData}
-    userCanEdit={true}
-    initialRating={2}
-    ratingType="price"
-  />
+  <RatingBox {...RatingBoxData} userCanEdit={true} initialRating={2} ratingType="price" />
+);
+export const PriceThreeStarStatic = () => (
+  <RatingBox {...RatingBoxData} initialRating={3} ratingType="price" />
+);
+export const PriceThreeStarInteractive = () => (
+  <RatingBox {...RatingBoxData} userCanEdit={true} initialRating={3} ratingType="price" />
 );
