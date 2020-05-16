@@ -1,0 +1,19 @@
+.rating-box {
+    border: 1px solid black;
+    border-radius: 5px;
+    width: fit-content;
+    height: fit-content;
+}
+
+.rating-box--view-only {
+    border: 1px solid gray;
+    background-color: lightgrey;
+}
+
+.star--selected {
+    /* Nothing so far */
+}
+
+.rating-box--view-only .star--unselected svg path{
+    fill: grey;
+}
