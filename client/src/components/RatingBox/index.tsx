@@ -6,7 +6,6 @@ import {
   DollarIconFull,
 } from "./icons";
 import "./styles.css";
-import { isCompositeComponent } from "react-dom/test-utils";
 
 /* 
 Notes about this module:
@@ -17,6 +16,7 @@ Notes about this module:
     from the user, the parent component will recive a report of a 3 rating. 
 - We are doing this because we want a 1 rating to always be 'worst', while 3 is always 'best'. However, visually 3 dollar signs is bad,
     and 1 is good. This way, there won't be confution for the user, but the back end can also stay consistent. 
+- Icons used are svgs and are stored in the icon.tsx file in this folder.
 */
 
 export type ratingIcons = "stars" | "price";
@@ -104,6 +104,7 @@ export default function RatingBox({
       ? DollarIconFull
       : null;
 
+  // Creates a span, and puts in either the filled or unfilled icon, with or without click event
   const Icon = (num: number) => {
     const selected =
       num === 1
@@ -115,41 +116,24 @@ export default function RatingBox({
         : false;
 
     if (!userCanEdit) {
-      if (selected) {
-        return (
-          <span key={num} className="icon--selected">
-            {IconFilled}
-          </span>
-        );
-      } else {
-        return (
-          <span key={num} className="icon--unselected">
-            {IconEmpty}
-          </span>
-        );
-      }
+      return (
+        <span
+          key={num}
+          className={selected ? "icon--selected" : "icon--unselected"}
+        >
+          {selected ? IconFilled : IconEmpty}
+        </span>
+      );
     } else {
-      if (selected) {
-        return (
-          <span
-            key={num}
-            className="icon--selected"
-            onClick={() => updateCurrentRating(num)}
-          >
-            {IconFilled}
-          </span>
-        );
-      } else {
-        return (
-          <span
-            key={num}
-            className="icon--unselected"
-            onClick={() => updateCurrentRating(num)}
-          >
-            {IconEmpty}
-          </span>
-        );
-      }
+      return (
+        <span
+          key={num}
+          className={selected ? "icon--selected" : "icon--unselected"}
+          onClick={() => updateCurrentRating(num)}
+        >
+          {selected ? IconFilled : IconEmpty}
+        </span>
+      );
     }
   };
 
