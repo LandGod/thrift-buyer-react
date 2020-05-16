@@ -38,3 +38,5 @@ export const ThreeStarStatic = () => (
 export const ThreeStarInteractive = () => (
   <RatingBox {...RatingBoxData} userCanEdit={true} initialRating={3} />
 );
+// @ts-ignore
+export const FailureModeBadType = () => (<RatingBox {...RatingBoxData} type='test' />)

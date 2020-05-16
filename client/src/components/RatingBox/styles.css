@@ -10,9 +10,7 @@
     background-color: lightgrey;
 }
 
-.star--selected {
-    /* Nothing so far */
-}
+/* .star--selected { } */
 
 .rating-box--view-only .star--unselected svg path{
     fill: grey;

@@ -126,7 +126,10 @@ export default function RatingBox({
         </div>
       </div>
     );
-  } else {
+  } else if (type === "price") {
     return null; // Temp value to avoid errors until this section is fleshed out
+  } else {
+      console.error(`Improper type specified for "Type" property in RatingBox. Must be "stars" or "price". Provided value was: "${type}"`);
+      return(<div>Error. Rating data corrupted.</div>)
   }
 }
