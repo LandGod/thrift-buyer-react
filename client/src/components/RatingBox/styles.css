@@ -10,8 +10,8 @@
     background-color: lightgrey;
 }
 
-/* .star--selected { } */
+/* .icon--selected { } */
 
-.rating-box--view-only .star--unselected svg path{
+.rating-box--view-only .icon--unselected svg path{
     fill: grey;
 }

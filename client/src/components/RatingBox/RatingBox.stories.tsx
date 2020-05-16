@@ -44,6 +44,10 @@ export const FailureModeBadType = () => (
   <RatingBox {...RatingBoxData} type="test" />
 );
 
+export const PriceOneStarStatic = () => (
+    <RatingBox {...RatingBoxData} initialRating={1} ratingType="price" />
+  );
+
 export const PriceTwoStarStatic = () => (
   <RatingBox {...RatingBoxData} initialRating={2} ratingType="price" />
 );
