@@ -11,10 +11,10 @@ export default {
 };
 
 export const ToggleSwitchData = {
-  
+  callback: action("Toggled postion"),
 };
 
 // -----------------------------------------------------------------------------
 // -----------------------------------------------------------------------------
-export const DefaultLeft = () => <ToggleSwitch startingPosition="left" />;
-export const DefaultRight = () => <ToggleSwitch startingPosition="right" />;
+export const DefaultLeft = () => <ToggleSwitch {...ToggleSwitchData} startingPosition="left" />;
+export const DefaultRight = () => <ToggleSwitch {...ToggleSwitchData} startingPosition="right" />;
