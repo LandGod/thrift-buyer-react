@@ -19,6 +19,7 @@ export default function ToggleSwitch({
 
   return (
     <div className="switch__outline" onClick={toggleFunction} >
+      <div className="switch__inner-track"></div>
       <div className="switch__circle" style={{transform: `${ position === 'left' ? "translate(0)" : "translate(33px)"}`}}></div>
     </div>
   );

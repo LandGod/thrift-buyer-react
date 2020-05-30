@@ -8,12 +8,24 @@
     background: rgb(197, 197, 197);
 }
 
+.switch__inner-track {
+    position: absolute;
+    height: 4px;
+    width: 50px;
+    top: 9px;
+    left: 2px;
+    border: 0;
+    border-radius: 4px;
+    background: rgb(87, 87, 87);
+}
+
 .switch__circle {
     position: absolute;
     border: 0.5px solid black;
-    left: 0;
-    width: 20px;
-    height: 20px;
+    left: 1px;
+    top: 1px;
+    width: 18px;
+    height: 18px;
     border-radius: 100%;
     background: rgb(136, 178, 255);
     transition: transform 0.3s ease-in-out;
