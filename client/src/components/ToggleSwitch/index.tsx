@@ -28,13 +28,13 @@ export default function ToggleSwitch({
         fill-rule="evenodd"
         clip-rule="evenodd"
         d="M17 17H7C4.24 17 2 14.76 2 12C2 9.24 4.24 7 7 7H17C19.76 7 22 9.24 22 12C22 14.76 19.76 17 17 17ZM7 8.2C4.9 8.2 3.2 9.9 3.2 12C3.2 14.1 4.9 15.8 7 15.8H17C19.1 15.8 20.8 14.09 20.8 12C20.8 9.9 19.09 8.2 17 8.2H7Z"
-        fill="#ffffff"
+        fill="#000000"
       />
       <path
         fill-rule="evenodd"
         clip-rule="evenodd"
         d="M17 17H7C4.24 17 2 14.76 2 12C2 9.24 4.24 7 7 7H17C19.76 7 22 9.24 22 12C22 14.76 19.76 17 17 17ZM7 8.2C4.9 8.2 3.2 9.9 3.2 12C3.2 14.1 4.9 15.8 7 15.8H17C19.1 15.8 20.8 14.09 20.8 12C20.8 9.9 19.09 8.2 17 8.2H7Z"
-        fill="white"
+        fill="black"
         fill-opacity="0.01"
       />
     </svg>
