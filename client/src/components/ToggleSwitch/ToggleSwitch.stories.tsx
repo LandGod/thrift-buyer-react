@@ -16,4 +16,5 @@ export const ToggleSwitchData = {
 
 // -----------------------------------------------------------------------------
 // -----------------------------------------------------------------------------
-export const NoRatingsStatic = () => <ToggleSwitch startingPosition="left" />;
+export const DefaultLeft = () => <ToggleSwitch startingPosition="left" />;
+export const DefaultRight = () => <ToggleSwitch startingPosition="right" />;
