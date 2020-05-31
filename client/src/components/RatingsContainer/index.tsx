@@ -2,7 +2,11 @@ import React from "react";
 import RatingBox from "../RatingBox";
 import { CategoryList, CategoryRatings } from "../sharedInterfaces";
 
-function RatingsContainer({ categories }: { categories: CategoryList }) {
+export default function RatingsContainer({
+  categories,
+}: {
+  categories: CategoryList;
+}) {
   return (
     <div className="ratings__container">
       {Object.entries(categories).map(
