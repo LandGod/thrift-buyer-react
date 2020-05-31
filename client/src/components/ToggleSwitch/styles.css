@@ -1,0 +1,21 @@
+.switch__outline {
+    position: relative;
+    border: 2px solid black;
+    border-radius: 30px;
+    width: 55px;
+    height: 22px;
+    overflow: hidden;
+    background: rgb(197, 197, 197);
+}
+
+.switch__circle {
+    position: absolute;
+    border: 0.5px solid black;
+    left: 1px;
+    top: 1px;
+    width: 18px;
+    height: 18px;
+    border-radius: 100%;
+    background: rgb(136, 178, 255);
+    transition: transform 0.3s ease-in-out;
+}
