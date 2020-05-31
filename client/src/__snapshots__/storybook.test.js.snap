@@ -1955,3 +1955,35 @@ exports[`Storyshots RatingBox Two Star Static 1`] = `
   </div>
 </div>
 `;
+
+exports[`Storyshots ToggleSwitch Default Left 1`] = `
+<div
+  className="switch__outline"
+  onClick={[Function]}
+>
+  <div
+    className="switch__circle"
+    style={
+      Object {
+        "transform": "translate(0)",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`Storyshots ToggleSwitch Default Right 1`] = `
+<div
+  className="switch__outline"
+  onClick={[Function]}
+>
+  <div
+    className="switch__circle"
+    style={
+      Object {
+        "transform": "translate(33px)",
+      }
+    }
+  />
+</div>
+`;
