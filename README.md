@@ -1,3 +1,6 @@
+## NOTE: Project is currently deprecated
+I may decide to revamp this in the future, but for now I'm turning things off. A number of the APIs I used for this have changed or require me to pay to keep them going, in addition to the hosting fees for the site itself.
+
 # ThriftBuyer
 
 ThriftBuyer is rating and note-taking application which allows users who frequently shop at thrift stores for work, to keep track of and share the best places to find certain items. Any user can search for stores near them and see what kinds of items can be found at that store, as well as what the community thinks of the quality, quantity, and price point, of those items. Not just that, but users can write their own notes about each store and item category, so that when they come back to store later, they can see their previous impressions about it.
